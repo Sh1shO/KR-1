@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Таблица грузов</title>
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Таблица грузов</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Название груза</th>
+                <th>Вес груза</th>
+                <th>Объем груза</th>
+                <th>Отправитель</th>
+                <th>Получатель</th>
+                <th>Дата отправки</th>
+                <th>Статус</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cargo in test1 %}
+            <tr>
+                <td>{{ cargo.0 }}</td>
+                <td>{{ cargo.1 }}</td>
+                <td>{{ cargo.2 }}</td>
+                <td>{{ cargo.3 }}</td>
+                <td>{{ cargo.4 }}</td>
+                <td>{{ cargo.5 }}</td>
+                <td>{{ cargo.6 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
