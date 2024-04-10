@@ -4,4 +4,5 @@ from KR1 import views
 
 urlpatterns = [
     path('', views.index),
+    path('second/', views.second),
 ]

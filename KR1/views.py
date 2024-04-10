@@ -2,9 +2,17 @@ from django.shortcuts import render
 import sqlite3
 
 def index(request):
-    c = sqlite3.connect('Cargo.sqlite')
-    car = c.cursor()
-    car.execute("SELECT CargoName, CargoWeight, CargoVolume, Sender, Recipient, DataOfDispatch, Status FROM Cargo")
-    test1 = car.fetchall()
-    return render(request, 'index.html', {'test1': test1})
+    conn = sqlite3.connect('FFF.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM Cargo')
+    data = cursor.fetchall()
+    conn.close()
+    return render(request, 'index.html', {'data':data})
 
+def second(request):
+    conn = sqlite3.connect('FFF.db')
+    cursor = conn.cursor()
+    cursor.execute('SELECT * FROM Vehicles')
+    data = cursor.fetchall()
+    conn.close()
+    return render(request, 'second.html', {'data':data})

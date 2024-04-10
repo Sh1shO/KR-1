@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <a href="/second">Транспорт</a>
     <title>Таблица грузов</title>
     <style>
         .table {
@@ -18,18 +17,18 @@
         }
     </style>
 </head>
+    <a href="/">Груз</a>
+
 <body>
     <h1>Таблица грузов</h1>
     <table class="table">
         <thead>
             <tr>
-                <th>Название груза</th>
-                <th>Вес груза</th>
-                <th>Объем груза</th>
-                <th>Отправитель</th>
-                <th>Получатель</th>
-                <th>Дата отправки</th>
-                <th>Статус</th>
+                <th>Название ТС</th>
+                <th>Тип ТС</th>
+                <th>Грузоподъёмность</th>
+                <th>Скорость</th>
+                <th>Состояние</th>
             </tr>
         </thead>
         <tbody>
@@ -40,8 +39,6 @@
                 <td>{{ cargo.2 }}</td>
                 <td>{{ cargo.3 }}</td>
                 <td>{{ cargo.4 }}</td>
-                <td>{{ cargo.5 }}</td>
-                <td>{{ cargo.6 }}</td>
             </tr>
             {% endfor %}
         </tbody>
